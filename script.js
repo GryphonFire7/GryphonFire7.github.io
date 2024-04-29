@@ -32,7 +32,10 @@ async function getData(poke,req) {
 }
 async function genCard(name) {
   const data = await getInfo(name)
-  
+  if (!data) {
+    const errormsg = newItem("DIV")
+    errormsg.innerHTML = `<p>Sorry, but there has been an error fetching data for '${name}'. Please check your spelling.<p>`
+  }
   const card = newItem("TR")
   card.style = `
   background: #111111;
@@ -102,7 +105,7 @@ async function main() {
     document.getElementById("results").style.display = "default"
     document.getElementById("home").style.display = "none"
     const search = document.getElementById("search").value
-    await parse(search)
+    await genCard(search)
 }
 function home(){
   document.getElementById("home").value.display = "default"
