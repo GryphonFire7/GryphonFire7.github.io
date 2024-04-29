@@ -70,7 +70,7 @@ async function genCard(name) {
   adopt(card,col1)
   adopt(card,col2)
   adopt(card,col3)
-  adopt(table,card)
+  table.innerHTML = card.innerHTML
 }
 async function getInfo(pokemon) {
   const ret = {
