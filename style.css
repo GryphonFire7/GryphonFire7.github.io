@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+* {
+  --font: "Concert One";
+  --font-padding: 0px;
+  --grey: #333333;
+  --nav: rgba(51,51,51,0.8);
+  --grey-to-red: linear-gradient(to right,var(--poke-red),var(--grey));
+  --dark-grey: rgba(24,24,24,0.4);
+  --darker: rgb(30,30,30);
+  --poke-red: #EE2200;
+  --nav-height: 55px;
+  --text-col: #AAAAAA;
+}
+body {
+  background: var(--darker);
+  color: white;
+  font-family: var(--font), sans-serif;
+}
+.content {
+  text-align: center;
+  color: var(--text-col);
+  position: absolute;
+  background: var(--dark-grey);
+  top: var(--nav-height);
+  left: 7.5vw;
+  width: 85vw;
+  z-index: -100;
+  font-size: 20px;
+}
+h1 {
+  color: var(--poke-red);
+  font-size: 60px;
+  text-align: center;
+  margin: 5px;
+}
+h1,p,h2,h3,h4,h5,h6,input,button {
+  padding: var(--font-padding) !important;
+}
+.nav {
+  position: fixed;
+  background: var(--nav);
+  list-style-type: none;
+  width: 100vw;
+  height: var(--nav-height);
+  margin: 0px;
+  padding: 0px;
+  left: 0px;
+  top: 0px;
+}
+.nav > li {
+  text-align: center;
+  color: var(--poke-red);
+  font-size: 40px;
+  height: var(--nav-height);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.nav>.txt:hover {
+  background: var(--dark-grey)
+}
+.nav > .left {
+  float: left;
+}
+.nav > .right {
+  float: right;
+  padding-left: 10px;
+}
+.nav > li > input {
+  color: var(--poke-red);
+  background: var(--dark-grey);
+  border: none;
+  height: 30px;
+  line-height: 50px;
+  margin-bottom: 12.5px;
+  margin-top: 0px !important;
+  padding-left: 10px !important;
+  font-size: 20px;
+  font-family: var(--font), sans-serif;
+  indent-width: 5px;
+}
+input:focus {
+  border-color: var(--poke-red);
+}
+.nav > .submit {
+  line-height: 60px;
+  transform: rotate(-45deg)
+}
+#search {
+  border-radius: 5px;
+  border: 0px solid transparent !important;
+  background: #111111;
+  color: #DD0022;
+  height: 2em;
+  font-family: monospace;
+  font-size: 0.4em;
+  text-indent: 10px;
+}
+#main {
+  display: none;
+}
+a {
+  color: var(--poke-red);
+  text-decoration: none;
+}
