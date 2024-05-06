@@ -31,7 +31,7 @@ async function getData(poke,req) {
   return json
 }
 async function genCard(name) {
-  const data = await getInfo(name.toLowerCase())
+  const data = await getInfo(name)
   if (!data) {
     const errormsg = newItem("DIV")
     errormsg.innerHTML = `<p>Sorry, but there has been an error fetching data for '${name}'. Please check your spelling.<p>`
@@ -104,7 +104,7 @@ function genColumn(card,content) {
 async function main() {
     document.getElementById("results").style.display = "default"
     document.getElementById("home").style.display = "none"
-    const search = document.getElementById("search").value
+    const search = document.getElementById("search").value.toLowerCase()
     await genCard(search)
 }
 function home(){
