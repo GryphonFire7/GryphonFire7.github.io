@@ -100,6 +100,6 @@ input:focus {
   display: none;
 }
 a {
-  color: var(--poke-red);
-  text-decoration: none;
+  color: var(--poke-red) !important;
+  text-decoration: none !important;
 }
