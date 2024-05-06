@@ -31,7 +31,7 @@ async function getData(poke,req) {
   return json
 }
 async function genCard(name) {
-  const data = await getInfo(name)
+  const data = await getInfo(name.toLowerCase())
   if (!data) {
     const errormsg = newItem("DIV")
     errormsg.innerHTML = `<p>Sorry, but there has been an error fetching data for '${name}'. Please check your spelling.<p>`
